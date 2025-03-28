@@ -19,15 +19,29 @@ const car = new Object();
 car.brand = "Toyota";
 car.model = "Camry";
 
-// 3. Object.create() Method
-const personPrototype = {
-    greet() {
-        console.log(`Hello, my name is ${this.name}`);
-    }
-};
-const john = Object.create(personPrototype);
-john.name = "John";
-john.greet(); // Hello, my name is John
+const ajay ={
+    name:"ajay kr shakya",
+    age:17,
+    country:"india",
+    number:[2,3,5,7,7],
+    greet:()=>
+        "hey what is going on"
+    
+}
+
+ajay.father="chander pal";
+console.log("ajay",ajay)
+console.log("ajay dot notation",ajay.greet)
+console.log("ajay bracet notation notation",ajay["age"])
+
+
+console.log("ajay object function greet",ajay.greet())
+console.log("looping")
+// looping 
+for(let key in ajay){
+    console.log(`${key} : ${ajay[key]}`)
+}
+
 
 // ===== 2. DOT VS BRACKET NOTATION =====
 /**
@@ -48,13 +62,14 @@ const dynamicKey = "specialSkill";
 const developer = {
     [dynamicKey]: "Problem Solving"
 };
+console.log("advanced bracet notaion")
 console.log(developer.specialSkill); // "Problem Solving"
 
 // ===== 3. ITERATING OBJECTS =====
 /**
  * THEORY: Multiple ways to loop through object properties
  */
-
+console.log("topic three")
 // for...in loop
 for (let key in person) {
     console.log(`${key}: ${person[key]}`);
@@ -220,8 +235,8 @@ const clonedData = deepClone(originalData);
  */
 
 // Export for module systems (if needed)
-export {
-    person,
-    createUser,
-    deepClone
-};
+// export {
+//     person,
+//     createUser,
+//     deepClone
+// };
