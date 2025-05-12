@@ -41,7 +41,7 @@ isSorted();
 
 // 1 : two pointer (for sorted array)
 
-const arr3 = [2, 2,2, 6, 9, 12, 14, 16, 19, 19];
+const arr3 = [2, 2, 2, 6, 9, 12, 14, 16, 19, 19];
 
 const removeDuplicateSorted = (arr) => {
   if (arr.length == 0) return [];
@@ -57,7 +57,7 @@ const removeDuplicateSorted = (arr) => {
 };
 
 const k = removeDuplicateSorted(arr3);
-console.log(arr3.slice(0, k)); 
+console.log(arr3.slice(0, k));
 console.log("Length after removing duplicates:", k);
 
 // 2 : two loop (for un sorted array)

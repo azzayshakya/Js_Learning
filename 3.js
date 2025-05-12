@@ -37,6 +37,7 @@ console.log(uniqueSymbol === anotherSymbol); // false
 // Stored by reference, mutable
 
 // Object
+// An object is a collection of key-value pairs. Keys are strings or Symbols, and values can be any data type.
 const person = {
     name: "John",
     age: 30,
@@ -47,6 +48,7 @@ const person = {
 };
 
 // Array (special type of object)
+// An array is a special object for storing ordered collections.
 const fruits = ['Apple', 'Banana', 'Cherry'];
 const mixedArray = [1, 'two', { key: 'value' }, true];
 

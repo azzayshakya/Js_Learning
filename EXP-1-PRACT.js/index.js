@@ -199,3 +199,7 @@ console.log(obj)
 // Boolean([])         // true
 // Boolean(' ')        // true
 // Boolean('0')        // true
+
+
+let Myage =17;
+const isValid = age>18 ? "vote":"can not vote" 

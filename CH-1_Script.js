@@ -41,9 +41,24 @@ console.log(c); // ✅ 30
 
 console.log("\n📌 Key Differences in Hoisting\n");
 console.table([
-  { Variable: "var", Hoisted: "✅ Yes", DefaultValue: "undefined", Accessible_Before_Declaration: "✅ Yes" },
-  { Variable: "let", Hoisted: "✅ Yes", DefaultValue: "❌ Not Initialized", Accessible_Before_Declaration: "❌ No (TDZ)" },
-  { Variable: "const", Hoisted: "✅ Yes", DefaultValue: "❌ Not Initialized", Accessible_Before_Declaration: "❌ No (TDZ)" }
+  {
+    Variable: "var",
+    Hoisted: "✅ Yes",
+    DefaultValue: "undefined",
+    Accessible_Before_Declaration: "✅ Yes",
+  },
+  {
+    Variable: "let",
+    Hoisted: "✅ Yes",
+    DefaultValue: "❌ Not Initialized",
+    Accessible_Before_Declaration: "❌ No (TDZ)",
+  },
+  {
+    Variable: "const",
+    Hoisted: "✅ Yes",
+    DefaultValue: "❌ Not Initialized",
+    Accessible_Before_Declaration: "❌ No (TDZ)",
+  },
 ]);
 
 console.log("\n🛠 Function Hoisting\n");
