@@ -104,3 +104,5 @@ Hoisting is JavaScript’s way of moving **variable and function declarations** 
 
 ⚡ **Summary**: Always declare variables and functions properly to avoid unexpected hoisting behavior.
 */
+
+// practice
