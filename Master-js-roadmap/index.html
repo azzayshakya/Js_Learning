@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mastery Roadmap</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --high: #ef4444;
+            --medium: #f59e0b;
+            --low: #10b981;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .section-icon {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .topics-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .topic-card {
+            background-color: var(--card-bg);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.25rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 4px solid var(--primary);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .topic-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .priority {
+            font-size: 1.25rem;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-left: 0.5rem;
+        }
+
+        .priority-high {
+            color: var(--high);
+        }
+
+        .priority-medium {
+            color: var(--medium);
+        }
+
+        .priority-low {
+            color: var(--low);
+        }
+
+        .topic-notes {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .learning-path {
+            margin-top: 3rem;
+            background-color: var(--card-bg);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .learning-path h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        .learning-path ol {
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .learning-path li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.25rem;
+        }
+
+        .new-item {
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 4px;
+            padding: 0 4px;
+            font-weight: 500;
+        }
+
+        .legend {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .legend-item span {
+            margin-right: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .topics-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Mastery Roadmap</h1>
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="priority priority-high">🔴</span>
+                    <div>High Priority</div>
+                </div>
+                <div class="legend-item">
+                    <span class="priority priority-medium">🟡</span>
+                    <div>Medium Priority</div>
+                </div>
+                <div class="legend-item">
+                    <span class="priority priority-low">🟢</span>
+                    <div>Low Priority</div>
+                </div>
+                <div class="legend-item">
+                    <span class="new-item">Text</span>
+                    <div>New Additions</div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2><span class="section-icon">🧠</span>Core JavaScript Fundamentals</h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Variables (var, let, const)</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Understand scoping and hoisting differences</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Data Types (Primitive & Reference)</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">string, number, boolean, null, undefined, symbol, object, <span
+                            class="new-item">BigInt</span></div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Type Coercion & Type Conversion</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Implicit vs explicit conversion; <span class="new-item">common
+                            gotchas</span></div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Operators</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">== vs ===, logical, arithmetic, short-circuiting, nullish coalescing, <span
+                            class="new-item">optional chaining</span></div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Control Structures</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Master for, while, do-while, for..in, for..of</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Functions</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Function declaration, expression, parameters, arguments, return values
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Scope</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Global, Function, Block scope; includes lexical and dynamic scope</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Hoisting</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">How variables and functions are hoisted</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Closures</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Extremely important for interviews and advanced use</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Strict Mode</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">"use strict"; Useful for writing secure JS</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Memory Management Basics</span></div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Understanding references vs values and avoiding memory leaks</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="section-icon">🧱</span>Intermediate JavaScript</h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Arrays and Array Methods</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">map, filter, reduce, forEach, find, etc.</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Objects & Object Methods</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Destructuring, shorthand, Object.keys, Object.values</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">this Keyword</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Depends on how a function is called</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">call, apply, bind</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Understand difference and usage</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Prototypes & Prototypal Inheritance</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Basis of JavaScript's inheritance</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">new, Constructor Functions</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">How JS simulates class-like behavior</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">ES6 Classes & Inheritance</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Syntactic sugar over prototypes</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Destructuring</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Arrays and Objects</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Spread & Rest Operators</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Versatile in function arguments and merging</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Template Literals</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Cleaner string interpolation</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Default, Named, and Anonymous Functions</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Function expressions & uses</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Arrow Functions</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Understand lexical this</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Error Handling</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">try, catch, finally; Also look at custom error classes</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Event Loop & Call Stack</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Essential to understanding async behavior</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Execution Context & Lexical Environment</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Helps in debugging complex scope issues</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Garbage Collection</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes"><span class="new-item">Important for preventing memory leaks</span></div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Higher Order Functions</span></div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Creating and using functions that operate on other functions</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Method Chaining</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Fluent interfaces and builder patterns</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="section-icon">🔁</span>Asynchronous JavaScript</h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Callbacks</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">The base of async logic</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Promises</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">States: pending, fulfilled, rejected</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">async / await</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Cleaner promise handling</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Error Handling in Async Code</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Use try-catch blocks around await</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Event Loop, Microtasks, Macrotasks</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Deep dive into JS concurrency model</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">setTimeout, setInterval</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Know how timers affect execution order</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Promise Methods</span></div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Promise.all, Promise.race, Promise.allSettled, Promise.any</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Async Patterns</span></div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Sequential, parallel, and race execution patterns</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">AbortController</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Canceling fetch requests and other async operations</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="section-icon">🧩</span>Advanced JavaScript</h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Modules (import, export)</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">ES6 Modules vs CommonJS</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Closures (again!)</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Used in currying, private variables, etc.</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Currying & Partial Application</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Functional programming patterns</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Debounce & Throttle</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Useful for performance in DOM events</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Memoization</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Optimization technique</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Recursion</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Interview-heavy concept</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">IIFE</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Immediately Invoked Function Expressions; avoid polluting scope</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Functional Programming Basics</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Immutability, pure functions, etc.</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Composition & Pipe</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Advanced FP patterns</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Proxy & Reflect</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Metaprogramming capabilities</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Symbol Type</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Unique property keys and well-known symbols</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Design Patterns in JS</span></div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Module, Observer, Factory, Singleton patterns</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Web Workers</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Parallelism in JavaScript</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="section-icon">🌐</span>Browser & Environment</h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">DOM Manipulation</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Selectors, traversal, manipulation</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">DOM Events & Event Delegation</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">addEventListener, event.target, bubbling</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Browser BOM</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Window, Location, Navigator, etc.</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">LocalStorage, SessionStorage</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">For persistent client-side storage</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Cookies</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Good for authentication flow</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Fetch API & XMLHttpRequest</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Native APIs for network requests</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">CORS</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Cross-Origin Resource Sharing</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Web APIs</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Geolocation, Clipboard, etc.</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Intersection Observer</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Efficient scroll-based effects and lazy loading</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Custom Events</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Creating and dispatching custom events</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Service Workers</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Offline capabilities and PWAs</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Web Components</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Custom Elements, Shadow DOM, and HTML Templates</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="section-icon">🧰</span>ES6+ Features</h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">let, const</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Block-scoping and immutability</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Arrow Functions</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Shorter syntax and this binding</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Destructuring</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Cleaner data extraction</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Spread / Rest</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Copying, combining, and function arguments</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Template Strings</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Cleaner strings with embedded expressions</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">for...of / for...in</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Know difference and use-cases</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Default Parameters</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">For cleaner function definitions</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Map, Set, WeakMap, WeakSet</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Alternative to Object/Array for storing data</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Optional Chaining (?.)</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Safe property access</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Nullish Coalescing (??)</div>
+                        <div class="priority priority-high">🔴</div>
+                    </div>
+                    <div class="topic-notes">Fallback only for null/undefined</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Dynamic Imports & Lazy Loading</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Performance optimization</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title">Generators & Iterators</div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes"><span class="new-item">Important for async control flow</span></div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Top-level await</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Using await outside async functions (in modules)</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">Private Class Fields</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">Using # for truly private properties and methods</div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-title"><span class="new-item">String/Array New Methods</span></div>
+                        <div class="priority priority-medium">🟡</div>
+                    </div>
+                    <div class="topic-notes">at(), replaceAll(), Object.fromEntries(), etc.</div>
+                </div>
+
+
+
+
+                <!-- 🧪 Testing and Debugging
+TopicPriorityNotesConsole methods (log, warn, error, dir)🔴 HighBasic debuggingChrome DevTools🔴 HighBreakpoints, performance tab, network tabWriting Tests (Jest, Vitest)🟡 MediumUnit, integration, mockingDebugging Async Code🔴 HighUsing .catch, try/catch, breakpoints in async flowsPerformance Profiling🔴 HighUsing DevTools to identify bottlenecksMemory Leak Detection🟡 MediumFinding and fixing memory issuesTest-Driven Development🟡 MediumWriting tests before implementationSnapshot Testing🟡 MediumFor UI components and data structures
+🛠️ Tooling & Ecosystem
+TopicPriorityNotesNPM / Yarn / pnpm🔴 HighDependency managementBabel🟡 MediumTranspiling for browser supportWebpack / Vite / Parcel🟡 MediumBundlers for modern appsLinters (ESLint)🟡 MediumCode quality enforcementFormatters (Prettier)🟡 MediumAuto-format codePackage.json🔴 HighDependencies, scripts, versionsEnvironment Variables🟡 MediumUse .env files in JS projectsTypeScript Basics🔴 HighStatic typing for JavaScriptMonorepo Tools🟡 Mediumpnpm workspaces, Nx, TurborepoTree-shaking🟡 MediumOptimizing bundle size
+🔐 Security Concepts
+TopicPriorityNotesXSS (Cross Site Scripting)🔴 HighPrevent injection attacksCSRF🟡 MediumLearn how tokens workContent Security Policy🟡 MediumBrowser-level protection headersSecure Storage Practices🟡 MediumNever store sensitive info in localStorageInput Sanitization🔴 HighPreventing injection attacksJWT Authentication🟡 MediumUnderstanding JSON Web TokensHTTPS/TLS🟡 MediumSecure data transmission
+📊 Data Handling & State Management
+TopicPriorityNotesJSON Operations🔴 Highstringify, parse, handling circular referencesForm Validation🔴 HighClient-side validation strategiesData Structures in JS🔴 HighImplementing stacks, queues, trees in JSState Management Patterns🟡 MediumFlux, Redux patterns, Context API conceptsImmutable Data Patterns🟡 MediumWorking with immutable data structures
+🚀 Advanced Project Skills
+TopicPriorityNotesCode Splitting🟡 MediumLoading only what's necessaryProgressive Enhancement🟡 MediumBuilding resilient applicationsAccessibility in JS🔴 HighMaking interactive elements accessibleInternationalization🟡 MediumHandling multiple languages and localesError Boundaries & Monitoring🟡 MediumCatching and reporting errors in production
+🚀 Step-by-Step Learning Flow
+
+Master Core Fundamentals (🔴)
+Dive Deep into Functions, Scope, this, Closures (🔴)
+Understand Async Patterns and Event Loop (🔴)
+Learn ES6+ Features (🔴)
+Build Small Projects (e.g., ToDo App, Weather App)
+Explore Browser APIs and DOM Manipulation
+Learn Debugging and Chrome DevTools
+Explore Tooling: NPM, Babel, Webpack/Vite
+Study Data Structures & Algorithms in JavaScript
+Read Source Code of JS Libraries (e.g., Axios, Lodash)
+Start Writing Unit Tests (Jest or Vitest)
+Solve JS Interview Questions and Practice DSA in JS
+Build a Medium-Sized Full Stack Application
+Contribute to Open Source JavaScript Projects
+Implement Design Patterns in Real Projects
+Learn Performance Optimization Techniques -->

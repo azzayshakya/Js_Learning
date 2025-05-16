@@ -5,10 +5,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="./script.js" defer></script> -->
+    <style rel="style.css"></style>
     <title>JS learning</title>
+    <style>
+        body {
+            height: 300vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgb(252, 208, 208);
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            list-style-type: none;
+
+
+        }
+
+        nav ul li {
+            margin: 0px 10px;
+            font-size: 1.5rem;
+            background-color: red;
+            padding: 5px 2cqmin;
+            border-radius: 20px;
+            color: white;
+            font-weight: 500;
+        }
+
+        .login-container {
+            position: fixed;
+            top: 50%;
+            left: 30%;
+            background-color: gainsboro;
+            height: 200px;
+            width: 500px;
+            display: flex;
+            /* align-items: center; */
+            /* text-align: center; */
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 500;
+            /* position: relative; */
+            display: none;
+
+
+        }
+
+        nav ul li:hover {
+            transform: scale(1.2);
+            transition: all ease-in-out 0.3s;
+        }
+
+        .close-model {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            cursor: pointer;
+        }
+
+
+        /* static */
+        .static-box {
+            position: static;
+            background-color: lightgray;
+            padding: 10px;
+            border: 1px solid black;
+
+        }
+
+        /* relative */
+
+        .parent {
+            /* background-color: lightyellow;
+            position: relative;
+            top: 20px;
+            left: 20px; */
+        }
+
+        .relative-box {
+            /* position: relative;
+            top: 20px;
+            left: 30px; */
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid blue;
+            height: 100vh;
+        }
+
+        .relative-parent {
+            position: relative;
+            height: 150px;
+            background-color: #eee;
+            margin-bottom: 50px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: salmon;
+            padding: 10px;
+            border: 1px solid red;
+        }
+
+
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: greenyellow;
+            padding: 10px;
+            border: 1px solid green;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: orange;
+            padding: 10px;
+            border: 1px solid darkorange;
+        }
+    </style>
 </head>
 
 <body>
+
+    <nav>
+        <ul>
+            <li>new</li>
+            <li>new</li>
+            <li id="login">Login </li>
+        </ul>
+    </nav>
+    <div class="login-container">
+        please login first
+        <div id="close" class="close-model">C</div>
+    </div>
+    <div class="static-box">Static Box</div>
+
+    <div class="parent">
+        <div class="relative-box">Relative Box</div>
+    </div>
+
+
+
+    <div class="relative-parent">
+        <div class="absolute-box">Absolute Box</div>
+    </div>
+
+
+    <div class="fixed-box">Fixed Box</div>
+
+
+    <div style="height: 2000px;">
+        <div class="sticky-box">Sticky Box</div>
+    </div>
+
+    <ajay>ajay us here</ajay>
+
+
+
+    <!--  what are the positions in css -->
+    <!-- inline vs block element -->
+
+
+
+
+    <!-- js -->
+    <!-- terniary operator vs if else statment -->
+
+    <!-- shallow copy vs deep copy -->
+
+
+
+
+
+
 
     <!-- <script src="./script.js"></script> -->
 
@@ -17,7 +204,7 @@
     <!-- <script src="./CH-1_Script.js"></script> -->
 
     <!-- hoisting practice in js  -->
-    <script src="./8.js"></script>
+    <!-- <script src="./8.js"></script> -->
 
 
 
@@ -27,6 +214,9 @@
     <!-- EXP-1-PRACT -->
     <!-- <script src="/EXP-1-PRACT.js/index.js"></script> -->
     <!-- <script src="/EXP-1-PRACT.js/index2.js"></script> -->
+
+    <!-- EXP-3-PRACT -->
+    <script src="/EXP-3-PRACT.js/index1.js"></script>
 
 
     <!-- asd -->
