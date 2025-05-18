@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.user-Profile-Page {
+    background-color: rgb(253, 149, 149);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.user-profile-card {
+    width: 350px;
+    height: 440px;
+    background-color: aliceblue;
+    border-radius: 40px;
+    padding: 20px;
+    position: relative;
+    transition: all 0.5s ease;
+    animation: fadein 0.8s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.user-profile-card:hover {
+    scale: 1.1;
+
+}
+
+
+
+.user-image img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 40px;
+
+}
+
+.user-about {
+    /* border: 2px red solid; */
+    position: relative;
+    top: 10px;
+}
+
+.user-about h2 {
+    font-weight: 600;
+    font-size: 25px;
+
+
+}
+
+.user-about h4 {
+    color: rgb(104, 103, 103);
+    font-size: 15px;
+    font-weight: 300;
+
+}
+.user-about h3 {
+  
+font-size: 20px;
+margin-top:10px;
+color: red;
+border: 1px black solid;
+border-radius: 10px;
+padding: 5px;
+font-weight: 500;
+
+text-align: center;
+}
+.user-interaction-button {
+    /* border: 2px red solid; */
+}
+
+.user-interaction-button button {
+    padding: 10px 15px;
+    width: 140px;
+    border-radius: 20px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+
+
+}
+
+.user-interaction-button #add-friend-button {
+    background-color: rgb(123, 232, 123);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+}
+
+.user-interaction-button #remove-friend-button {
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
