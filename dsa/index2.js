@@ -99,8 +99,118 @@ const MovesZeroToEnd = (arr) => {
 const arr6 = [1, 2, 0, 0, 3, 4, 5, 0, 0, 3];
 // console.log(MovesZeroToEnd(arr6));
 
+// Find the number that appear ones and others two
 
+const FsingleOccNumber = (arr) => {
+  let occurence = 0;
 
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] == arr[j]) {
+        occurence++;
+      }
+    }
+    if (occurence == 1) {
+      return arr[i];
+    }
+    occurence = 0;
+  }
+};
+const arr7 = [1, 1, 24, 6, 6, 1];
 
+// console.log(FsingleOccNumber(arr7));
 
-// 
+//  do it with xor too ;
+
+// 10 : Longest Subarray with given Sum K(Positives)
+
+// way 1 :  using two loops
+const LongestSubArrayWithKpositive = (arr, k) => {
+  let maxlength = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let s = 0;
+    for (let j = i; j < arr.length; j++) {
+      s += arr[j];
+      if (s == k) {
+        maxlength = Math.max(maxlength, j - i + 1);
+      }
+    }
+  }
+  return maxlength;
+};
+
+// way 2 :  using two pointers
+
+const LongestSubArrayWithKpositiveWay2 = (a, k) => {
+  let n = a.length;
+
+  let left = 0;
+  let right = 0;
+  let sum = a[0];
+  let maxLen = 0;
+  while (right < n) {
+    while (left <= right && sum > k) {
+      sum -= a[left];
+      left++;
+    }
+
+    if (sum === k) {
+      maxLen = Math.max(maxLen, right - left + 1);
+    }
+
+    right++;
+    if (right < n) {
+      sum += a[right];
+    }
+  }
+
+  return maxLen;
+};
+
+const arr9 = [5, 1, 1, 1, 2, 3];
+let k = 6;
+
+// console.log(LongestSubArrayWithKpositiveWay2(arr9, k));
+
+// Q: 2 SUM
+// way :1 using two loops
+const TwoSum = (arr, k) => {
+  for (let i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let j = i + 1; j < arr.length; j++) {
+      sum = arr[i] + arr[j];
+      if (sum == k) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+  return [-1, -1];
+};
+
+let arr10 = [2, 6, 5, 8, 11];
+let target = 14;
+// console.log(TwoSum(arr10, target));
+
+// way : 2  using two pointers
+
+const TwoSumT = (arr, k) => {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = 0;
+    sum = arr[left] + arr[right];
+    if (sum == k) {
+      return [arr[left], arr[right]];
+    }
+    if (sum > k) {
+      right--;
+    }
+    if (sum < k) {
+      left++;
+    }
+  }
+  return [-1, -1];
+};
+let arr11 = [2, 6, 5, 8, 11];
+let target2 = 13;
+console.log(TwoSumT(arr11, target2));
