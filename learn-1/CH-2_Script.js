@@ -23,7 +23,7 @@ var theoryVar = 10; // ✅ Declared & initialized
 
 // ❗ Assignment: Changing the value of an already declared variable
 theoryVar = 20; // ✅ Allowed with var & let
-
+ 
 /**
  * =============================================
  * 2️⃣ var, let, const - Differences & Best Practices
@@ -51,7 +51,7 @@ console.log(c); // ✅ 15
  * ✅ Use `const` by default.
  * ✅ Use `let` only when reassignment is needed.
  * ❌ Avoid `var` due to hoisting issues & unexpected redeclarations.
- */
+*/
 
 /**
  * =============================================
