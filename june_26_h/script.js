@@ -22,3 +22,14 @@ func();
 // console.log(addbutton);
 // addbutton.then(()=
 // >{}).catch(()=>{})
+
+document.getElementById("newBtn").addEventListener("click", () =>
+  buttonPromise.then((e) => {
+    console.log(e);
+  }),
+);
+
+const buttonPromise = new Promise((res, rej) => {
+  // res("got resoolved on click");
+  rej("got rejected on click");
+});
