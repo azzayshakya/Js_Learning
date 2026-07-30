@@ -1,3 +1,5 @@
+import { variable } from "./script2";
+console.log("babes", variable);
 const promo = new Promise((resolve, reject) => {
   var sucess = false;
   setTimeout(() => {
