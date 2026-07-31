@@ -5,7 +5,6 @@ const handleButton = () => {
 
   if (count <= 2) {
     const newDiv = document.createElement("div");
-
     const randomTop = Math.floor(Math.random() * 800) + 1;
     const randomLeft = Math.floor(Math.random() * 1500) + 1;
 
@@ -50,3 +49,12 @@ const handleButton = () => {
 };
 
 document.getElementById("createCircle").addEventListener("click", handleButton);
+
+document.addEventListener("click", (click) => {
+  const x = click.clientX;
+  const y = click.clientY;
+  const randomVal = Math.floor(Math.random() * 999);
+
+  // console.log("got click");
+  // debugger;
+});
